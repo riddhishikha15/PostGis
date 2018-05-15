@@ -1,0 +1,32 @@
+
+CREATE TABLE HW3_Location( Placemarks VARCHAR(20),Category VARCHAR(20), Location geometry);
+
+--Note: The Location table will store lat and long points into it.
+
+
+insert into HW3_Location values ('MyApt','house','POINT(-118.2804058 34.0284408)');
+insert into HW3_Location values ('Fisher Museum','house','POINT(-118.287326 34.018961)');
+insert into HW3_Location values ('Tommy Trojan','house','POINT(-118.285423 34.020776)');
+insert into HW3_Location values ('SGM','house','POINT(-118.289123 34.021361)');
+insert into HW3_Location values ('Leavey','house','POINT(-118.282833 34.021853)');
+insert into HW3_Location values ('Target','house','POINT(-118.284185 34.025613)');
+insert into HW3_Location values ('Thornton','house','POINT(-118.285439 34.023137)');
+insert into HW3_Location values ('RTCC','house','POINT(-118.286489 34.020212)');
+insert into HW3_Location values ('Viterbi E-Quad','house','POINT(-118.2826845 34.022549)');
+
+--Note: I inserted all the 9 points into the table HW3_Points
+
+
+ALTER TABLE HW3_Location ADD COLUMN Placemark_ID SERIAL PRIMARY KEY;
+
+--Note: ALtered Table to create Id column as Primary Key.
+
+--Computing Convex Hull:
+Select ST_AsText(ST_ConvexHull(ST_Collect(location))) from HW3_Location;
+
+--Computing Nearest neighbors:
+SELECT PLACEMARK_ID, PLACEMARKS FROM HW3_Location WHERE PLACEMARK_ID<>1 
+ORDER BY LOCATION <#> ST_SETSRID(ST_MAKEPOINT(-118.2804058,34.0284408),4326)LIMIT 3;
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
