@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<!-- THIS IS THE CONVEX HULL -->
+
+ <description>Convex Hull</description>
+    <Placemark id="track1">
+        <name>Path</name>
+        <LineString>
+            <coordinates>
+-118.287326,34.018961,0
+-118.289123,34.021361,0
+-118.284185,34.025613,0
+-118.2804058,34.0284408,0
+-118.282833,34.021853,0
+-118.287326,34.018961,0
+            </coordinates>
+        </LineString>
+		<Style> 
+  <LineStyle>  
+   <color>#ff0000ff</color>
+   <width>5</width>
+  </LineStyle> 
+ </Style>
+    </Placemark>
+	
+	<!-- THIS IS THE 1ST NEIGHBOR Target@uscVillage-->
+	<Placemark> 
+ <LineString>
+  <coordinates>
+  -118.2804058,34.0284408,0
+  -118.284185,34.025613,0
+  </coordinates>
+ </LineString>
+  <Style> 
+  <LineStyle>  
+   <color>#ff00ff00</color>
+   <width>3</width>
+  </LineStyle> 
+ </Style>
+ </Placemark>
+ 
+ <!-- THIS IS THE 2ND NEIGHBOR Vitebi E-Quad -->
+ <Placemark> 
+ <LineString>
+  <coordinates>
+  -118.2804058,34.0284408,0
+  -118.2826845,34.022549,0
+  </coordinates>
+ </LineString>
+  <Style> 
+  <LineStyle>  
+   <color>#ff00ff00</color>
+   <width>3</width>
+  </LineStyle> 
+ </Style>
+
+</Placemark>
+
+ <!-- THIS IS THE 3RD NEIGHBOR Leavey -->
+ <Placemark> 
+ <LineString>
+  <coordinates>
+  -118.2804058,34.0284408,0
+   -118.282833,34.021853,0
+  </coordinates>
+ </LineString>
+  <Style> 
+  <LineStyle>  
+   <color>#ff00ff00</color>
+   <width>3</width>
+  </LineStyle> 
+ </Style>
+</Placemark>
+
+<!-- All the nine points -->
+<Placemark><name>My Apartment</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2804058,34.0284408</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>USc-Fisher Museum</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.287326,34.018961</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Tommy Trojan</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.285423,34.020776</coordinates>
+</Point>
+</Placemark>
+
+<Placemark><name>SGM</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.289123,34.021361</coordinates>
+</Point>
+</Placemark>
+<Placemark><name>Leavey Library</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.282833,34.021853</coordinates>
+</Point>
+</Placemark>
+
+<Placemark><name>Target@uscVillage</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.284185,34.025613</coordinates>
+</Point>
+</Placemark>
+
+<Placemark><name>Thornton School of Music</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.285439,34.023137</coordinates>
+</Point>
+</Placemark>
+
+<Placemark><name>RTCC</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.286489,34.020212</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Viterbi E-Quad</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2826845,34.022549</coordinates>
+</Point>
+</Placemark>
+
+</Document></kml>
